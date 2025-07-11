@@ -31,6 +31,7 @@ public class QueueTest {
 		int removed = queue[front++];
 		System.out.println("삭제 값 : " +removed);
 		
+		
 
 		
 		
