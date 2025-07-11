@@ -10,11 +10,14 @@ public class MethodOverloadTest {
 		int r2 = add(2,3);
 		double r3 = add(1.1, 3.14);
 		String r4 = add("Hello","Java");
+		String r5 = add("number_",1);
 		
 		System.out.println("r1 : " + r1);
 		System.out.println("r2 : " + r2);
 		System.out.println("r3 : " + r3);
 		System.out.println("r4 : " + r4);
+		System.out.println("r5 : " + r5);
+
 	}
 	
 	//오버로드 메서드 정의 (*메서드이름은 소문자) 메서드 이름은 같지만 매개변수로 구분되는 메서드
@@ -32,5 +35,10 @@ public class MethodOverloadTest {
 		return a + b;
 	}
 	
+	public static String add(String a, int b) {
+		
+		
+		return a+b;
+	}
 
 }
