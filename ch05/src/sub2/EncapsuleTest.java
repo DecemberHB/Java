@@ -3,6 +3,16 @@ package sub2;
  * 날짜 : 2025/07/14
  * 이름 : 박효빈
  * 내용 : 캡슐화 실습
+ * 
+ *
+ * 캡슐화(정보은닉, Encapsulation)
+ * - 캡슐화는 객체의 속성을 외부에서 참조하지 못하게 객체의 속성을 은닉하는 특성
+ * - 클래스의 속성을 반드시 private으로 선언
+ * - private 선언을 하면 생성자(Constructor)로 속성을 초기화
+ * - 은닉된 정보(속성)을 안전하게 사용하기 위해 Getter, Setter 사용
+ * -  
+ * 
+ * 
  * */
 public class EncapsuleTest {
 	public static void main(String[] args) {
@@ -35,17 +45,23 @@ public class EncapsuleTest {
 		Account kb = new Account("국민은행","101-11-1001","김유신",10000);
 		kb.deposit(30000);
 		kb.withdraw(10000);
+		
+		// 이름 김유신 -> 김유진 수정
 		kb.setName("김유진");
+		// 출력 30000
 		kb.show();
 		
-		// Account 객체 생성과 초기2화
+		// Account 객체 생성과 초기화 2
 		// (우리은행, 101-21-2001, 김춘추, 30000)
 		// 출력 50000
 		// 은행명 우리은행 -> 너희은행 수정
+		
 		Account wr = new Account("우리은행", "101-21-2001", "김춘추", 30000);
 		wr.deposit(40000);
 		wr.withdraw(20000);
+		// 은행명 우리은행 -> 너희은행 수정
 		wr.setBank("너희은행");
+		// 출력 50000
 		wr.show();
 	}
 

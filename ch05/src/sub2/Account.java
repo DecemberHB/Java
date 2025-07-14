@@ -39,6 +39,7 @@ public class Account {
 
 	}
 	
+	//Getter / Settet
 	public String getBank() {
 		return bank;
 	}
