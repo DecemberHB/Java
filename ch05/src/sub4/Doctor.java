@@ -11,6 +11,7 @@ public class Doctor extends Person {
 	}
 	
 	public void work() {
+		super.work();
 		super.introduce();
 		System.out.println("저는 의사이며 전공은["+specialty+"]입니다.");
 	}
