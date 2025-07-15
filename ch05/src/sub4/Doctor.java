@@ -12,7 +12,7 @@ public class Doctor extends Person {
 	
 	public void work() {
 		super.introduce();
-		System.out.println("저는 ["+specialty+"]의사입니다. 입니다.");
+		System.out.println("저는 의사이며 전공은["+specialty+"]입니다.");
 	}
 
 }
