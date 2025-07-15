@@ -84,7 +84,7 @@ public class ClassTest {
 		wr.bank = "우리은행";
 		wr.id = "101-21-2001";
 		wr.name ="김춘식";
-		kb.balace = 10000 ;
+		wr.balace = 10000 ;
 		
 		wr.deposit(1000000);
 		wr.withdraw(905000);

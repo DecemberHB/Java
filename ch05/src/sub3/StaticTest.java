@@ -3,7 +3,6 @@ package sub3;
 /**
  * 
  * 날짜 : 2025/07/14 
- * 이름 : 박효빈 
  * 내용 : Static 변수(클래스변수), Static 매서드(클래스 매서드) 실습하기
  * 
  * 
@@ -40,11 +39,11 @@ public class StaticTest {
 		// 전체 차량수 확인
 		Car sonata = new Car("소나타", "흰색", 0); // 생성자 호출
 		Car avante = new Car("아반떼", "검정색", 0);
-		Car gtandu = new Car("그렌져", "검정색", 0);
+		Car grandu = new Car("그렌져", "검정색", 0);
 
 		sonata.show();
 		avante.show();
-		gtandu.show();
+		grandu.show();
 
 		// 클래스매서드(정적매서드)는 클래스타입으로 참조 호출
 		// private 의 경우

@@ -1,7 +1,7 @@
 package sub2;
 /**
  * 날짜 : 2025/07/14
- * 이름 : 박효빈
+
  * 내용 : 캡슐화 실습
  * 
  *
@@ -63,6 +63,38 @@ public class EncapsuleTest {
 		wr.setBank("너희은행");
 		// 출력 50000
 		wr.show();
+		
+		/*
+		 *Book Class 사용
+		 * */
+		
+		Book book1 = new Book("삼국지", "누구세용?", "1001", 10);
+		book1.show();
+		
+		boolean isOK = book1.borrowBook();
+		if(isOK) {
+			System.out.println(book1.getTitle() + "도서 대출 성공 !");
+			
+		}else {
+			System.out.println(book1.getTitle() + "도서 대출 실패 !");
+
+		}
+		
+		Book book2 = new Book("명품 Java", "황기태", "10002", 1);
+		
+		boolean isOK1 = book2.borrowBook();
+		boolean isOK2 = book2.borrowBook();
+		book2.show();
+		
+		if(isOK2) {
+			System.out.println(book2.getTitle() + "도서 대출 성공 !");
+			
+		}else {
+			System.out.println(book2.getTitle() + "도서 대출 실패 !");
+
+		}
+	
+		//book2.show();
 	}
 
 }
