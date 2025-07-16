@@ -36,7 +36,6 @@ public class InheritTest {
 		kb.show();
 		
 		//Person 실습//
-		
 		Doctor doctor = new Doctor("김유진", 23, "소아과");
 		Engineer engineer = new Engineer("김춘추", 21, "소프트웨어");
 		
@@ -45,3 +44,4 @@ public class InheritTest {
 	}
 	
 }
+

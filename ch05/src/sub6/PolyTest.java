@@ -51,6 +51,26 @@ public class PolyTest {
 		 arr[0].move();
 		 arr[1].move();
 		 arr[2].move();
+		 
+		 //다형성 확인 문제
+		 /* 1. Pet Class 생성 , Dog Class 생성, Cat 클래스 생성
+		  * 2. Dog, Cat은 Pet 클래스를 상속
+		  * 3. Dog, Cat MakeSound() 정의
+		  *  - Dog 멍멍 Cat 야옹
+		  *  Main 클래스에서 PrintSound() 정의 후 Dog, Cat을 매개변수로 받아 makeSound를 정의
+		  * */
+		 
+		 Pet cat = new Cat();
+		 Pet dog = new Dog();
+		 
+
+		 printSound(dog);
+		 printSound(cat);
+	}
+	
+	public static void printSound(Pet pet) { //Dog, Cat 매개변수 지정 -> 부모타입을 선언
+		
+		pet.makeSound();
 	}
 
 }
