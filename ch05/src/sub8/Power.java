@@ -2,7 +2,6 @@ package sub8;
 
 public class Power implements Soket {
 
-	
 	private Bulb bulb;
 	public Power(Bulb bulb) {
 		this.bulb = bulb;
