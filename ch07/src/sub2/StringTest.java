@@ -20,6 +20,7 @@ public class StringTest {
 		if(str1 == str2) {
 			System.out.println("str1, str2 문자열 주소값 같다");
 
+			
 		}else {
 			System.out.println("str1, str2 문자열 주소값 다르다");
 

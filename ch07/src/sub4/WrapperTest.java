@@ -29,7 +29,6 @@ public class WrapperTest {
 		System.out.println("box3 : " + box3);
 
 		// 문자열 -> 기본 타입 변환
-
 		String str1 = "1";
 		String str2 = "2.1";
 		String str3 = "false";
