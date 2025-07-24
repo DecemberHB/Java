@@ -17,7 +17,7 @@ public class Book {
 		if(this.isBorrowd  == false) {
 			isBorrowd = true;
 			System.out.println("대출 가능 .. isBorrowd : True");
-			\
+			
 		}else{
 			System.out.println("대출 중 .. isBorrowd : Flase");
 
