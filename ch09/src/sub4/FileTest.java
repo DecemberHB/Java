@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 /*
  * 날짜 : 2025/07/23
@@ -14,64 +15,54 @@ import java.nio.file.Paths;
  * */
 public class FileTest {
 
+	
 	public static void main(String[] args) {
-
+		
 		String path1 = "C:\\Users\\GGG\\Desktop\\source.txt";
-		String path2 = "C:\\Users\\GGG\\Desktop\\sample";
-
+		String path2 = "C:\\Users\\GGG\\Desktop\\Sample";
+		
 		// 파일 객체 생성
 		File file1 = new File(path1);
-		File file2 = new File(path2);
-
+		File file2 = new File(path2);		
+		
 		// 파일 작업
 		try {
-			file1.createNewFile();
-			file2.mkdir();
-
-			System.out.println("file1 존재 여부 : " + file1.exists());
-			System.out.println("file2존재 여부 : " + file2.exists());
-			System.out.println("file1 파일 여부 : " + file2.isFile());
+			file1.createNewFile();  // 파일 생성
+			file2.mkdir();			// 디렉터리 생성
+			
+			System.out.println("file1 존재여부 : " + file1.exists());
+			System.out.println("file2 존재여부 : " + file2.exists());
+			System.out.println("file1 파일여부 : " + file1.isFile());
 			System.out.println("file2 디렉터리 여부 : " + file2.isDirectory());
-			System.out.println("file1 이름  : " + file1.getName());
-			System.out.println("file1 이름: " + file2.getName());
-			System.out.println("file1 경로 : " + file2.getPath());
-			System.out.println("file1 겨오: " + file1.getPath());
-			System.out.println("file1 이름: " + file2.isDirectory());
-			System.out.println("file2 이름: " + file2.getAbsolutePath());
-			System.out.println("file2 이름: " + file2.isDirectory());
+			System.out.println("file1 이름 : " + file1.getName());
+			System.out.println("file2 이름 : " + file2.getName());
+			System.out.println("file1 상대 경로 : " + file1.getPath());
+			System.out.println("file2 상대 경로 : " + file2.getPath());
+			System.out.println("file1 시스템 경로 : " + file1.getAbsolutePath());
+			System.out.println("file2 시스템 경로 : " + file2.getAbsolutePath());
 			
-			
-			// 파일 식제
-			//file1.delete();
-			//file2.delete();
-			
+			//file1.delete(); // 파일 삭제
+			//file2.delete(); // 파일 삭제		
 			
 			// Files 실습
+			Path source = Paths.get("C:\\Users\\GGG\\Desktop\\source.txt");
+			Path target = Paths.get("C:\\Users\\GGG\\Desktop\\target.txt");
+			Path dest = Paths.get("C:\\Users\\GGG\\Desktop\\dest.txt");
+						
+			// 파일 복사
+			Files.copy(source, target);
 			
-		
-		Path souerce = Paths.get("C:\\\\Users\\\\GGG\\\\Desktop\\\\source.txt");
-		Path target = Paths.get("C:\\\\Users\\\\GGG\\\\Desktop\\\\target.txt");
-		Path dest = Paths.get("C:\\\\Users\\\\GGG\\\\Desktop\\\\dest.txt");
-		// 파일 복사
-		Files.copy(souerce, target);
-		
-		// 파일 이동
-		//Files.move(source, target, null);
-		
-		//파일 삭제
-		
-		Files.delete(target);
-
+			// 파일 이동
+			Files.move(source, dest, StandardCopyOption.REPLACE_EXISTING);
+			
+			// 파일 삭제
+			Files.delete(target);			
+			
+			
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		}
-		
-		// 파일 읻ㅇ
-		//Files.move(ssssssoutk, null, null)
-
-		System.out.println("프로글래몽료");
-
+		System.out.println("프로그램 종료...");
 	}
-
+	
 }

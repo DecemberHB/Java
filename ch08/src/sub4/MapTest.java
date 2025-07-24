@@ -48,7 +48,7 @@ public class MapTest {
 		
 		
 		// Map과 List 응용
-		
+	
 		Map<Integer, Apple> m1 = new HashMap<Integer, Apple>();
 		m1.put(101, new Apple("한국", 3000));
 		m1.put(102, new Apple("중국", 2000));
