@@ -8,7 +8,7 @@ import java.sql.Statement;
  * 
  * 날짜 : 2025/07/25 
  * 이름 : 박효빈 내용 
- * : 자바 Insert 실습하기
+ * : 자바 Update 실습하기
  * 
  */
 public class UpdateTest {
